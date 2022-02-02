@@ -1,0 +1,26 @@
+{
+  "name": "shopifytestapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@shopify/koa-shopify-auth": "^4.1.4",
+    "@shopify/shopify-api": "^2.0.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^14.3.2",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "koa": "^2.13.4",
+    "koa-router": "^10.1.1",
+    "koa-session": "^6.2.0",
+    "mongoose": "^6.1.9",
+    "morgan": "~1.9.1",
+    "nonce": "^1.0.4",
+    "shopify-api": "^0.2.3",
+    "shopify-node-api": "^1.11.1"
+  }
+}
