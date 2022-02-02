@@ -6,8 +6,12 @@ const Shop = require("../models/shop");
 const ShopifyConstruct = require("shopify-node-api");
 var router = express.Router();
 
-/* GET home page. */
 router.get("/", async (req, res) => {
+  res.send("WELCOME");
+});
+
+/* GET home page. */
+router.get("/shopify", async (req, res) => {
   // res.send("WELCOME");
   console.log("hit index page");
 
