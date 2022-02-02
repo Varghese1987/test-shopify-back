@@ -15,6 +15,8 @@ router.post("/shopify", async (req, res) => {
   // res.send("WELCOME");
   console.log("hit index page");
 
+  console.log(req.body);
+
   // console.log("request--->", req);
 
   // const query = Object.keys(req.query)
@@ -22,7 +24,7 @@ router.post("/shopify", async (req, res) => {
   //   .join("&");
   if (req.query.shop) {
     Shop.findOne(
-      { shopify_domain: req.query.shop, isActive: true },
+      { shopify_domain: req.body.shop, isActive: true },
       (err, shop) => {
         if (!shop) {
           return res.redirect(`/install/?${query}`);
