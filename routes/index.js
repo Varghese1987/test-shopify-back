@@ -39,7 +39,7 @@ router.post("/shopify", async (req, res) => {
   }
 });
 router.get("/install", function (req, res, next) {
-  console.log("ran install logic");
+  console.log("ran install logic cors enabled");
 
   const shopName = req.query.shop;
   const nonce = generateNonce();
