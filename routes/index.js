@@ -11,15 +11,15 @@ router.get("/", async (req, res) => {
 });
 
 /* GET home page. */
-router.get("/shopify", async (req, res) => {
+router.post("/shopify", async (req, res) => {
   // res.send("WELCOME");
   console.log("hit index page");
 
   // console.log("request--->", req);
 
-  const query = Object.keys(req.query)
-    .map((key) => `${key}=${req.query[key]}`)
-    .join("&");
+  // const query = Object.keys(req.query)
+  //   .map((key) => `${key}=${req.query[key]}`)
+  //   .join("&");
   if (req.query.shop) {
     Shop.findOne(
       { shopify_domain: req.query.shop, isActive: true },
